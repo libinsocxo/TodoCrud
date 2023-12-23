@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    body {
+        background-color: #53868B
+    }
+    .main_title{
+        color:white;
+        text-align:center;
+        margin-top:40px;
+    }
+    .task_box{
+        display:flex;
+        justify-content:center;
+        margin-top:30px;
+    }
+    #task_box1{
+        width:300px;
+        height:45px;
+        text-decoration:none;
+        border:none;
+        border-radius:5px;
+    }
+    .tasks_list_container {
+        margin-top: 100px;
+        width: 500px;
+        height: 350px;
+        border-radius:5px;
+        background-color: white;
+        display: flex;
+        overflow-y:scroll;
+        justify-content: center;
+    }
+    .tasks_main_container{
+        display:flex;
+        justify-content:center;
+    }
+    .task{
+        margin-top:25px;
+        margin-bottom:25px;
+    }
+  
+</style>
+
+<main>
+   <div class="main_container">
+       <h1 class="main_title">Tasks List</h1>
+       <div class="task_box">
+           <input type="text" id="task_box1">
+           <button style="margin-left:5px;border:none;border-radius:5px">Add</button>
+       </div>
+
+       <div class="tasks_main_container">
+           <div class="tasks_list_container">
+               <div style="display:flex;flex-direction:column">
+                   @foreach (var item in Model)
+                   {
+                       <div class="task">
+                           <span>hello</span>
+                           <button style="border:none;border-radius:5px;background-color:red;color:white">Delete</button>
+                           <button style="border:none;border-radius:5px;background-color:gold;color:white">Update</button>
+                       </div>
+                   }
+               </div>
+     
+
+            
+
+           </div>
+       </div>
+    
+
+
+   </div>
+</main>
